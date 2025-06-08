@@ -16,6 +16,8 @@ public class ConditionalDemo1 {
 
         System.out.println("Age: " + age);
         demoSwitch(3);
+        String data = getDayName(5);
+        System.out.println("Day name: " + data);
     }
 
     public static void demoSwitch(int day) {
@@ -43,6 +45,20 @@ public class ConditionalDemo1 {
                 break;
             default:
                 System.out.println("Invalid day");
+        }
+    }
+
+//    post Java 14 we can use switch expression
+    public static String getDayName(int day) {
+        switch (day) {
+            case 1: return "Monday";
+            case 2: return "Tuesday";
+            case 3: return "Wednesday";
+            case 4: return "Thursday";
+            case 5: return "Friday";
+            case 6: return "Saturday";
+            case 7: return "Sunday";
+            default: return "Invalid day";
         }
     }
 }
