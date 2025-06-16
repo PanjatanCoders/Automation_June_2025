@@ -1,6 +1,6 @@
-package com.saddy;
+package com.saddy.oops;
 
-abstract class EconomyCar {
+public abstract class EconomyCar {
     // Abstract method to be implemented by subclasses
     public abstract void carModel(String modelName);
 

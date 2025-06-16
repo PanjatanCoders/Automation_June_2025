@@ -1,4 +1,4 @@
-package com.saddy;
+package com.saddy.oops;
 
 public interface Car {
 //    By default, all methods in an interface are public and abstract.

@@ -1,6 +1,8 @@
 package com.saddy;
 
-public class TotyotaCar implements Car{
+import com.saddy.oops.Car;
+
+public class TotyotaCar implements Car {
     @Override
     public void carModel(String modelName) {
         System.out.println("Totyota Car Model: " + modelName);

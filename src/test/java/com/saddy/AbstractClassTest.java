@@ -1,6 +1,8 @@
 package com.saddy;
 
-public class AbstractClassTest extends EconomyCar{
+import com.saddy.oops.EconomyCar;
+
+public class AbstractClassTest extends EconomyCar {
     @Override
     public void carModel(String modelName) {
         System.out.println("Economy Car Model: " + modelName);
