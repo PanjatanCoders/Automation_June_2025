@@ -10,6 +10,8 @@ public class DemoLinkedList {
         linkedList.add("Apple");
 
         System.out.println(linkedList);
-        System.out.println(linkedList.get(0));
+        System.out.println(linkedList.get(1));
+        linkedList.remove(1);
+        System.out.println(linkedList);
     }
 }
