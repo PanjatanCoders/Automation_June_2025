@@ -2,6 +2,7 @@ package com.saddy.mapdemo;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class DemoMap {
@@ -10,9 +11,40 @@ public class DemoMap {
 //        HashMap<String, String> hashMap = new HashMap<>();
 //        LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<>();
 //        TreeMap<String, String> treeMap = new TreeMap<>();
-        demoHashMap();
+//        demoHashMap();
 //        demoNestedHashMap();
+//        demoTreeMap();
+//        demoLinkedHashMap();
     }
+
+    static void demoLinkedHashMap() {
+        LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<>();
+        linkedHashMap.put("name", "Alice");
+        linkedHashMap.put("age", "30");
+        linkedHashMap.put("city", "New York");
+        System.out.println("LinkedHashMap: " + linkedHashMap);
+
+        // Accessing elements
+        System.out.println("Name: " + linkedHashMap.get("name"));
+        System.out.println("Age: " + linkedHashMap.getOrDefault("age1", "Unknown"));
+
+        // Iterating through the LinkedHashMap
+        for (Map.Entry<String, String> entry : linkedHashMap.entrySet()) {
+            System.out.println(entry);
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+    }
+
+    static void demoTreeMap() {
+        TreeMap<String, String> treeMap = new TreeMap<>();
+        treeMap.put("name", "Alice");
+        treeMap.put("age", "30");
+        treeMap.put("city", "New York");
+        System.out.println("TreeMap: " + treeMap);
+    }
+
+
+
     static void demoHashMap() {
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("name", "Alice");
@@ -41,6 +73,22 @@ public class DemoMap {
         System.out.println("Values: " + hashMap.values());
         System.out.println("----------------------------------");
         System.out.println("Entries: " + hashMap.entrySet());
+        System.out.println("----------------------------------");
+        // Iterating through the HashMap
+        for (Map.Entry<String, String> entry : hashMap.entrySet()) {
+            System.out.println(entry);
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+        System.out.println("----------------------------------");
+        // Iterating using keySet()
+        for (String key : hashMap.keySet()) {
+            System.out.println("Key: " + key + ", Value: " + hashMap.get(key));
+        }
+        System.out.println("----------------------------------");
+        // Iterating using forEach
+        hashMap.forEach((key, value) -> {
+            System.out.println("Key: " + key + ", Value: " + value);
+        });
     }
 
     static void demoNestedHashMap() {
