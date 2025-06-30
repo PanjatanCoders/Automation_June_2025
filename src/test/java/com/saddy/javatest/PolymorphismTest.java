@@ -1,4 +1,4 @@
-package com.saddy;
+package com.saddy.javatest;
 
 import com.saddy.polymorphism.Animal;
 import com.saddy.polymorphism.Cow;

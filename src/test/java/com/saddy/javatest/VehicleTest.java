@@ -1,4 +1,4 @@
-package com.saddy;
+package com.saddy.javatest;
 
 import com.saddy.oops.Bike;
 import com.saddy.oops.Bus;

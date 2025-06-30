@@ -1,4 +1,4 @@
-package com.saddy;
+package com.saddy.javatest;
 
 import com.saddy.exceptionhandling.ExceptionDemo1;
 

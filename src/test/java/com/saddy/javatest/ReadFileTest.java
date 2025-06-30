@@ -1,8 +1,7 @@
-package com.saddy;
+package com.saddy.javatest;
 
 import com.saddy.exceptionhandling.ExceptionDemo2;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ReadFileTest {

@@ -1,6 +1,5 @@
-package com.saddy;
+package com.saddy.javatest;
 
-import com.saddy.enumdemo.PaymentType;
 import com.saddy.enumdemo.TestStatus;
 
 public class TestEnum {
