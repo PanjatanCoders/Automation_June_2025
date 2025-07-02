@@ -1,0 +1,42 @@
+Css Locators:
+1. By TagName-
+	- h2
+	- input
+2. By id:
+	- #input-sendkeys
+3. Class
+	- .className
+4. by Attribute
+	- textarea[id='textarea-example']
+5. Multiple Attribute
+ - input[id='new-todo-input'][type='text']
+
+6. combining class & id(and vice versa)
+ - .button#add-todo-button
+
+7. tagname with class or id
+ - button.button#add-todo-button
+
+ 8 tagname, class, id with attribute
+ - input.mt-1#login-email[placeholder='your@example.com']
+
+ 9. multiple class with tagname
+  - input.mt-1.rounded-md
+
+10. Starts-with
+  - a[title^='Live C']
+
+11. by contains
+  - a[title*='e Cricket S']
+
+12. Ends with
+  - a[title$='ket Score']
+
+13. direct child
+  - section#interactive-scenarios > p
+
+14. any child(seperating by space in between two tags)
+  - section#interactive-scenarios input
+
+15. any child with child properties
+ - section#interactive-scenarios input[name='password']
