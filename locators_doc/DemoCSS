@@ -35,7 +35,7 @@ Css Locators:
 13. direct child
   - section#interactive-scenarios > p
 
-14. any child(seperating by space in between two tags)
+14. any child(seperating by space in between two elements)
   - section#interactive-scenarios input
 
 15. any child with child properties
