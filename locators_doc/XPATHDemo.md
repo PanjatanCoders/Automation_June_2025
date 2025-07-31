@@ -71,3 +71,18 @@ _Relative path to the target_
 - `//div[@class= 'flex gap-2 mb-2']/child::button[.='Show Confirm']`
 
 ---
+
+---
+### XPath Axes for Navigation
+
+* `/` : Selects direct child nodes.
+* `//` : Selects descendant nodes at any level.
+
+---
+
+### Sibling Axes
+
+* **`following-sibling`**: Selects all following siblings of the context node.
+  * Example: `//td[.='CONT001']/following-sibling::td[3]` (Selects the 3rd `<td>` element that is a following sibling of the `<td>` containing 'CONT001').
+* **`preceding-sibling`**: Selects all preceding siblings of the context node.
+  * Example: `//td[.='In Transit']/preceding-sibling::td[3]` (Selects the 3rd `<td>` element that is a preceding sibling of the `<td>` containing 'In Transit').
