@@ -5,11 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 import java.util.List;
 
-public class SelectDemo {
+public class SelectDemo2 {
     static WebDriver driver;
     public static void main(String[] args) throws InterruptedException {
         driver = new ChromeDriver();
@@ -20,20 +19,21 @@ public class SelectDemo {
 
         WebElement dropDown = driver.findElement(By.xpath("//select[@id='country']"));
         Select select = new Select(dropDown);
-//        select.selectByVisibleText("India");
-//        select.selectByValue("in");
-//        select.selectByIndex(2);
-        select.selectByContainsVisibleText("ted S");
-        Thread.sleep(700);
-        String selectedData = select.getFirstSelectedOption().getText(); // it returns the
-        // default or current selected value
 
         List<WebElement> ddValues = select.getAllSelectedOptions(); //Applicable for multi
         // dropdown. And return all selected items
 
+        List<WebElement> actualValues = select.getOptions();
 
-        System.out.println("Selected data: " + selectedData);
-        Assert.assertEquals(selectedData, "United State");
+        actualValues.forEach(element -> System.out.println(element.getText()));
+
+        System.out.println("*".repeat(40));
+
+//        select.deselectAll(); //used for multiple select dropdowns to unselect all values
+
+        System.out.println(select.isMultiple());
+
+
         Thread.sleep(3000);
         driver.quit();
     }
