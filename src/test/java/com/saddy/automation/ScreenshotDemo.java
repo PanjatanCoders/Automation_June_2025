@@ -20,14 +20,14 @@ public class ScreenshotDemo {
 
         captureCompleteScreen();
 
-        captureElementScreehotShot();
+        captureElementScreenShot();
 
 
         Thread.sleep(2000);
         driver.quit();
     }
 
-    static void captureElementScreehotShot() throws IOException {
+    static void captureElementScreenShot() throws IOException {
         WebElement dropDown = driver.findElement(By.xpath("//select[@id='country']"));
         File src = dropDown.getScreenshotAs(OutputType.FILE);
         File dest = new File(filePath + "element_ss.png");
