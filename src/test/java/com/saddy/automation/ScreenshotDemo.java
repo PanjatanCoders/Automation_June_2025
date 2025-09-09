@@ -9,7 +9,6 @@ import java.io.IOException;
 
 public class ScreenshotDemo {
     static WebDriver driver;
-    static TakesScreenshot ts = (TakesScreenshot) driver;
     static String filePath = "G:\\AutomationProjects\\Automation_June_2025\\data\\";
     public static void main(String[] args) throws InterruptedException, IOException {
         driver = new ChromeDriver();
@@ -18,7 +17,7 @@ public class ScreenshotDemo {
         driver.get("https://panjatan.netlify.app/");
         System.out.println(driver.getTitle());
 
-        captureCompleteScreen();
+        captureCompleteScreen("screenshot", driver);
 
         captureElementScreenShot();
 
@@ -34,11 +33,11 @@ public class ScreenshotDemo {
         FileUtils.copyFile(src, dest);
     }
 
-    static void captureCompleteScreen() {
-
+    static void captureCompleteScreen(String screenName, WebDriver driver) {
+        TakesScreenshot ts = (TakesScreenshot) driver;
         try {
             File source = ts.getScreenshotAs(OutputType.FILE);
-            File destination = new File(filePath+ "screenshot.png");
+            File destination = new File(filePath + "/" + screenName + ".png");
             FileUtils.copyFile(source, destination);
             System.out.println("Screenshot saved to: " + filePath);
         } catch (Exception e) {
