@@ -12,6 +12,6 @@ public class TestBase {
 
     @AfterMethod
     public void afterMethod() {
-        System.out.println("Browser closed!!");
+        System.out.println("Browser closed!!\n");
     }
 }
