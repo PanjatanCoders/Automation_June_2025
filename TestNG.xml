@@ -1,18 +1,29 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="Automates Test Suite" verbose="1">
+    <parameter name="param1" value="Value1" />
+    <parameter name="userid" value="admin" />
+    <parameter name="pwd" value="password" />
     <test name="Test Package">
         <classes>
-            <class name="com.saddy.testngdemo.TestNGAnnotationsDemo1"/>
-            <class name="com.saddy.testngdemo.TestNGAnnotationsDemo2"/>
-            <class name="com.saddy.testngdemo.TestNGAttributesDemo">
+<!--            <class name="com.saddy.testngdemo.TestNGAnnotationsDemo1"/>-->
+<!--            <class name="com.saddy.testngdemo.TestNGAnnotationsDemo2"/>-->
+<!--            <class name="com.saddy.testngdemo.TestNGAttributesDemo">-->
+<!--                <methods>-->
+<!--                    <include name="attributeTest_TC001"/>-->
+<!--                    <include name="attributeTest_TC002"/>-->
+<!--                    <include name="attributeTest_TC003"/>-->
+<!--                    <include name="attributeTest_TC004"/>-->
+<!--                    <exclude name="attributeTest_TC005"/>-->
+<!--                    <include name="attributeTest_TC006"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="com.saddy.testngdemo.ParameterDemo">
+                <parameter name="classLevel" value="Class Level Value" />
                 <methods>
-                    <include name="attributeTest_TC001"></include>
-                    <include name="attributeTest_TC002"></include>
-                    <include name="attributeTest_TC003"></include>
-                    <include name="attributeTest_TC004"></include>
-                    <exclude name="attributeTest_TC005"></exclude>
-                    <include name="attributeTest_TC006"></include>
+                    <exclude name="parameterDemo1" />
+                    <include name="parameterDemo2" />
+                    <exclude name="parameterDemo3" />
                 </methods>
             </class>
         </classes>
