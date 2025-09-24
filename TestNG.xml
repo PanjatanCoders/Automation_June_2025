@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="Automates Test Suite" verbose="1">
+<suite name="Automates Test Suite" verbose="1" parallel="methods" thread-count="5">
     <parameter name="param1" value="Value1" />
     <parameter name="userid" value="admin" />
     <parameter name="pwd" value="password" />
@@ -21,11 +21,23 @@
             <class name="com.saddy.testngdemo.ParameterDemo">
                 <parameter name="classLevel" value="Class Level Value" />
                 <methods>
-                    <exclude name="parameterDemo1" />
+                    <include name="parameterDemo1" />
                     <include name="parameterDemo2" />
-                    <exclude name="parameterDemo3" />
+                    <include name="parameterDemo3" />
                 </methods>
             </class>
+        </classes>
+    </test>
+    <test name="Regression Test">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.saddy.testngdemo.ParallelTests"></class>
+        </classes>
+    </test>
+    <test name="Sanity Test">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.saddy.testngdemo.ParallelTests"></class>
         </classes>
     </test>
 </suite>
