@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class ScreenshotDemo {
-    static WebDriver driver;
+    public static WebDriver driver;
     static String filePath = "G:\\AutomationProjects\\Automation_June_2025\\data\\";
     public static void main(String[] args) throws InterruptedException, IOException {
         driver = new ChromeDriver();
