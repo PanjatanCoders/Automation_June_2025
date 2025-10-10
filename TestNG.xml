@@ -3,40 +3,41 @@
 <suite name="Automates Test Suite" verbose="1" parallel="methods" thread-count="5">
     <listeners>
         <listener class-name="com.saddy.listeners.MyTestListener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
     <parameter name="param1" value="Value1" />
     <parameter name="userid" value="admin" />
     <parameter name="pwd" value="password" />
-    <test name="Test Package">
-        <classes>
-<!--            <class name="com.saddy.testngdemo.TestNGAnnotationsDemo1"/>-->
-<!--            <class name="com.saddy.testngdemo.TestNGAnnotationsDemo2"/>-->
-<!--            <class name="com.saddy.testngdemo.TestNGAttributesDemo">-->
+<!--    <test name="Test Package">-->
+<!--        <classes>-->
+<!--&lt;!&ndash;            <class name="com.saddy.testngdemo.TestNGAnnotationsDemo1"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="com.saddy.testngdemo.TestNGAnnotationsDemo2"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="com.saddy.testngdemo.TestNGAttributesDemo">&ndash;&gt;-->
+<!--&lt;!&ndash;                <methods>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="attributeTest_TC001"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="attributeTest_TC002"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="attributeTest_TC003"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="attributeTest_TC004"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <exclude name="attributeTest_TC005"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="attributeTest_TC006"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                </methods>&ndash;&gt;-->
+<!--&lt;!&ndash;            </class>&ndash;&gt;-->
+<!--            <class name="com.saddy.testngdemo.ParameterDemo">-->
+<!--                <parameter name="classLevel" value="Class Level Value" />-->
 <!--                <methods>-->
-<!--                    <include name="attributeTest_TC001"/>-->
-<!--                    <include name="attributeTest_TC002"/>-->
-<!--                    <include name="attributeTest_TC003"/>-->
-<!--                    <include name="attributeTest_TC004"/>-->
-<!--                    <exclude name="attributeTest_TC005"/>-->
-<!--                    <include name="attributeTest_TC006"/>-->
+<!--                    <include name="parameterDemo1" />-->
+<!--                    <include name="parameterDemo2" />-->
+<!--                    <include name="parameterDemo3" />-->
 <!--                </methods>-->
 <!--            </class>-->
-            <class name="com.saddy.testngdemo.ParameterDemo">
-                <parameter name="classLevel" value="Class Level Value" />
-                <methods>
-                    <include name="parameterDemo1" />
-                    <include name="parameterDemo2" />
-                    <include name="parameterDemo3" />
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="Regression Test">
-        <parameter name="browser" value="firefox"></parameter>
-        <classes>
-            <class name="com.saddy.testngdemo.ParallelTests"></class>
-        </classes>
-    </test>
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Regression Test">-->
+<!--        <parameter name="browser" value="firefox"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="com.saddy.testngdemo.ParallelTests"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
     <test name="Sanity Test">
         <parameter name="browser" value="chrome"></parameter>
         <classes>

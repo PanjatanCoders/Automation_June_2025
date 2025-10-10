@@ -1,5 +1,9 @@
 package com.saddy.testngdemo;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -34,6 +38,9 @@ public class ParallelTests {
         System.out.println("Title from Test1: " + driver.get().getTitle());
     }
 
+    @Description("Verify successful login with valid credentials")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("User Authentication")
     @Test
     public void parallelTest2() {
         driver.get().get("https://panjatan.netlify.app/table");
@@ -41,6 +48,9 @@ public class ParallelTests {
         System.out.println("Title from Test2: " + driver.get().getTitle());
     }
 
+    @Description("Verify successful login with invalid credentials")
+    @Severity(SeverityLevel.MINOR)
+    @Story("User Authentication")
     @Test
     public void parallelTest3() {
         driver.get().get("https://panjatan.netlify.app/table");
