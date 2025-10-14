@@ -26,7 +26,8 @@ public class BasePage {
     }
 
     public void sendKeys(By locator, String data) {
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//        element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        element = driver.findElement(locator);
         element.clear();
         element.sendKeys(data);
     }
