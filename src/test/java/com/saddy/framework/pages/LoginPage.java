@@ -16,6 +16,7 @@ public class LoginPage extends BasePage {
 
 //    @FindBy(xpath = "//button[.='Login']")
     private By loginBtn = By.xpath("//button[.='Login']");
+    private By loginAlert = By.id("loginAlert");
 
 //    Login page constructor. Passing the driver instance to Parent BasePage using super()
     public LoginPage(WebDriver driver) {
@@ -23,10 +24,11 @@ public class LoginPage extends BasePage {
 //        PageFactory.initElements(driver, Login.class);
     }
 
-    public void login(String userId, String pwd) {
+    public RegistrationPage login(String userId, String pwd) {
         enterUserName(userId);
         enterPassword(pwd);
         clickLoginBtn();
+        return new RegistrationPage(driver);
     }
 
     public void enterUserName(String userId) {
@@ -39,6 +41,10 @@ public class LoginPage extends BasePage {
 
     public void clickLoginBtn() {
         click(loginBtn);
+    }
+
+    public String getLoginAlertMessage() {
+        return getText(loginAlert);
     }
 
 }

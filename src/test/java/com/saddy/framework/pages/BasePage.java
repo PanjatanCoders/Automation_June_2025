@@ -12,7 +12,7 @@ import java.time.Duration;
 public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
-    private WebElement element;
+//    private WebElement element;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -20,26 +20,31 @@ public class BasePage {
     }
 
 
+    public WebElement getElement(By locator) {
+         return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
     public void click(By locator) {
-        element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
         element.click();
     }
 
     public void sendKeys(By locator, String data) {
 //        element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        element = driver.findElement(locator);
+        WebElement element = driver.findElement(locator);
         element.clear();
         element.sendKeys(data);
     }
 
     public String getText(By locator) {
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         return element.getText();
     }
 
     public void selectByVisibleText(By locator, String data) {
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         Select select = new Select(element);
         select.selectByVisibleText(data);
     }
+
 }
