@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class RegistrationTest extends BaseTest{
-    private static final Logger log = LoggerFactory.getLogger(RegistrationTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(RegistrationTest.class);
     LoginPage loginPage;
     RegistrationPage registrationPage;
 
@@ -16,6 +16,7 @@ public class RegistrationTest extends BaseTest{
     public void beforeLogin() {
         loginPage = new LoginPage(driver);
         registrationPage = loginPage.login("admin", "password");
+        logger.debug("Login Successful");
 //        registrationPage = new RegistrationPage(driver);
     }
 
